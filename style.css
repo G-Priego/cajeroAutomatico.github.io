@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100svh;
+    display: flex;
+    background-color: #F1F1F1;
+    padding: 10%;
+    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#recent-logins{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color: aqua;
+}
+
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    padding: 1em;
+    gap: 1em;
+    background-color: aliceblue;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    
+    .profile-pic{
+        display: flex;
+        justify-content: center;
+        height: 70%;
+    }
+
+    .name{
+        font-size: smaller;   
+    }
+}
+
+
+img{
+    width: 3em;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;    
+ }
+
+#login{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 60%;
+    gap: 1em;
+}
+
+button{
+    border-radius: 1em;
+    border: none;
+    padding: 0.5em;
+    font-family: inherit;
+    font-size: larger;
+    cursor: pointer;
+    min-width: 30%;
+    max-width: 60%;
+}
+
+input{
+    border: none;
+    font-family: inherit;
+    font-size: larger;
+    padding-left: 0.5em;
+    max-width: 80%;
+}
