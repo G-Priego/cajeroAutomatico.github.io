@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    background-color: #F1F1F1;
+    padding: 10%;
+    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    height: 50%;
+}
+
+button{
+    padding: 1em;
+    font-family: inherit;
+    font-size: larger;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+}

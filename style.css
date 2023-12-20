@@ -101,3 +101,13 @@ input{
     padding-left: 0.5em;
     max-width: 80%;
 }
+
+.error{
+    color: rgb(215, 11, 11);
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.hiden{
+    display: none;
+}

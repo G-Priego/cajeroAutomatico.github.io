@@ -43,9 +43,21 @@
 
     <div id="login">
         <form action="" id="form">
-            <input type="text" name="username" id="username">
-            <input type="password" name="password" id="password">
-            <button type="submit">Log In</button>
+
+            <input type="text" name="username" id="input-username" placeholder="Nombre">
+            <span class="hiden" id="errorName">
+                Usuario incorrecto
+            </span>
+
+            <input type="password" name="password" id="input-pin" placeholder="PIN">
+            <span class="hiden" id="errorPin">
+                Password incorrecto
+            </span>
+
+            <button type="submit" id="btn-login">Log In</button>
+            <span class="hiden" id="errorNull">
+                Ingresa tus datos!
+            </span>
         </form>
     </div>
 
