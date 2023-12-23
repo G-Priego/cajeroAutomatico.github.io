@@ -8,7 +8,13 @@ body{
     width: 100vw;
     height: 100svh;
     display: flex;
-    background-color: #F1F1F1;
+    justify-content: space-around;
+    background: linear-gradient(193deg, #3b89d5, #d37042);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 17s ease infinite;
+    -moz-animation: AnimationName 17s ease infinite;
+    animation: AnimationName 17s ease infinite;
     padding: 10%;
     font-family: 'Inclusive Sans', sans-serif;
     font-family: 'Inconsolata', monospace;
@@ -19,6 +25,23 @@ body{
     font-family: 'Roboto Mono', monospace;
 }
 
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:81% 0%}
+    50%{background-position:20% 100%}
+    100%{background-position:81% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:81% 0%}
+    50%{background-position:20% 100%}
+    100%{background-position:81% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:81% 0%}
+    50%{background-position:20% 100%}
+    100%{background-position:81% 0%}
+}
+
 #recent-logins{
     width: 50%;
     height: 100%;
@@ -27,7 +50,8 @@ body{
     justify-content: center;
     align-items: center;
     gap: 1em;
-    background-color: aqua;
+    border-radius: 5px;
+    background-color: rgb(211, 66, 142, 0.3);
 }
 
 #cards{
@@ -35,29 +59,39 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     width: 70%;
+    height: 40%;
     padding: 1em;
     gap: 1em;
+    border-radius: 1em;
     background-color: aliceblue;
 }
 
 article{
     display: flex;
     flex-direction: column;
+    width: 30%;
+    border-radius: 4px;
+    background-color:rgb(219, 20, 60, 0.5);
     
     .profile-pic{
         display: flex;
         justify-content: center;
-        height: 70%;
+        height: 80%;
     }
 
     .name{
-        font-size: smaller;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20%;
+        font-size: 2dvh; 
+        font-weight: bold;
     }
 }
 
 
 img{
-    width: 3em;
+    width: 10em;
     display: flex;
     align-items: center;
     border-radius: 50%;
@@ -65,22 +99,20 @@ img{
     overflow: hidden;    
  }
 
-#login{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: pink;
+ .profile-pic:hover img {
+    transform: scale(1.2);
 }
 
-#form{
+#login-area{
+    width: 30%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
-    height: 60%;
+    align-items: center;
     gap: 1em;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 button{
@@ -88,26 +120,109 @@ button{
     border: none;
     padding: 0.5em;
     font-family: inherit;
-    font-size: larger;
+    font-size: 2.5dvh;
+    font-weight: bold;
     cursor: pointer;
+    background-color: dodgerblue;
+    color: white;
     min-width: 30%;
     max-width: 60%;
 }
 
+button:hover{
+    border: solid 3px gainsboro;
+}
+
 input{
     border: none;
+    border-radius: 1em;
     font-family: inherit;
-    font-size: larger;
+    font-size: 3dvh;
     padding-left: 0.5em;
     max-width: 80%;
+    color: rgb(146, 146, 146);
 }
 
 .error{
-    color: rgb(215, 11, 11);
-    font-family: sans-serif;
+    color: rgba(215, 11, 11, 0.6);
+    font-family: inherit;
     font-weight: bold;
 }
 
-.hiden{
+.hidden{
     display: none;
+}
+
+.input-section{
+    margin-left: 3em;
+    h3{
+        color:rgb(255, 255, 143);
+        font-size: 5dvh;
+    }
+    input{
+        margin-top: 1em;
+    }
+    button{
+        margin: 1em 1em;
+    }
+}
+
+#logout-section button{
+    margin-top: 2em;
+    font-size: 4dvh;
+    background-color: rgb(127, 255, 0, 0.5);
+}
+
+#message-area{
+    color: white;
+    font-size: 5dvh;
+    padding: 1em;
+    border: solid 4px white;
+}
+
+#balance-box {
+    h2{
+        color:rgb(255, 255, 143)
+        ;
+        font-size: 5dvh;
+        margin-top: 1em;
+    }
+
+    p{
+        color: blanchedalmond;
+        font-size: 9dvh; 
+    }
+    
+}
+
+#deposit-box{
+    padding-left: 3em;
+    padding-right: 3em;
+    h2{
+        font-size: 5dvh;
+        color: rgb(255, 255, 143);
+    }
+
+    p{
+        font-size: 3dvh;
+        color: blanchedalmond;
+    }
+}
+
+#withdraw-box{
+    margin-top: 1em;
+    padding: 3em 3em;
+    h2{
+        font-size: 5dvh;
+        color: rgb(255, 255, 143);
+    }
+
+    p{
+        font-size: 3dvh;
+        color: blanchedalmond;
+    }    
+}
+
+.b{
+    max-width: 50%;
 }

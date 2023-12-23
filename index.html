@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Inconsolata&family=Montserrat:wght@300&family=Poppins:wght@300&family=Raleway&family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Cajero automático</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Tu cajero automático</title>
 </head>
 <body>
     <div id="recent-logins">
-        <h1>Your ATM</h1>
-        <h2>Recent Logins</h2>
-        <span>Click your picture</span>
+        <h1>Tu ATM &#127975</h1>
+        <h2>Inicios de sesión recientes</h2>
 
         <div id="cards">
             <article>
@@ -36,31 +35,77 @@
                     <img src="https://i.pinimg.com/236x/4f/bb/dc/4fbbdc4f094c516db4cd4cbb86dc0f8d.jpg" alt="">
                 </div>               
                 <div class="name">Abigail</div>
-            </article>
-            
+            </article>            
         </div>
     </div>
 
-    <div id="login">
-        <form action="" id="form">
-
-            <input type="text" name="username" id="input-username" placeholder="Nombre">
-            <span class="hiden" id="errorName">
-                Usuario incorrecto
-            </span>
-
-            <input type="password" name="password" id="input-pin" placeholder="PIN">
-            <span class="hiden" id="errorPin">
-                Password incorrecto
-            </span>
-
-            <button type="submit" id="btn-login">Log In</button>
-            <span class="hiden" id="errorNull">
-                Ingresa tus datos!
-            </span>
-        </form>
+    <div id="login-area">
+        <!-- input para username -->
+        <input type="text" name="username" id="username-input" placeholder="Nombre">
+        <span class="hidden" id="errorName">
+            No existe el usuario
+        </span>
+        <!-- input para PIN -->
+        <input type="password" name="password" id="pin-input" placeholder="PIN">
+        <span class="hidden" id="errorPin">
+            PIN incorrecto
+        </span>
+        <!-- boton para submit datos -->
+        <button type="submit" id="submit-btn">Log in</span></button>
+        <span class="hidden" id="errorNull">
+            Ingresa tus datos!
+        </span>
     </div>
 
-    <script src="main.js"></script>
+    <div id="dashboard" style="display: none;">
+        <div class="b">
+            <div id="message-area"></div>
+            <div id="balance-box" >
+                <h2>Saldo</h2>
+                <p >
+                    $ <span id="balance">0</span>
+                </p>
+            </div> 
+        </div>
+        
+        <div id="transactions-section">
+            <div id="deposit-box" class="hidden">
+                <h2>Depósito <span class="material-symbols-outlined">savings</span></h2>
+                <p >
+                    Se realizó un depósito de $ <span id="deposit">0</span> a su cuenta.
+                </p>
+            </div>
+            <div id="withdraw-box" class="hidden" >
+                <h2>Retiro <span class="material-symbols-outlined">payments</span></h2>
+                <p>
+                    Se realizó un retiro de $ <span id="withdraw">0</span> de su cuenta.
+                </p>
+            </div>            
+        </div>
+
+        <div>
+            <!-- input para cantidad a depositar -->
+            <div class="input-section">
+                <h3>Depositar</h3>
+                <input type="number"  id="deposit-input" placeholder="Cantidad">
+                <button  id="deposit-btn">Depositar</button>
+                <p class="hidden" id="errorDeposit">¡Lo sentimos! Una cuenta no debe de tener más de $990 pesos.</p>
+                <p class="hidden" id="errorNegative">¡Ingrese valores positivos!</p>
+            </div>
+            <!-- input para cantidad a retirar -->
+            <div class="input-section">
+                <h3>Retirar</h3>
+                <input type="number"  id="withdraw-input" placeholder="Cantidad">
+                <button  id="withdraw-btn">Retirar</button>
+                <p class="hidden" id="errorWithdraw">¡Lo sentimos! Una cuenta no debe de tener menos de $10 pesos.</p>
+            </div>
+            <div id="logout-section">
+            <button id="logout-btn">Log out</span></button>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
